@@ -8,37 +8,37 @@
 
 
     <EditText
-        android:id="@+id/idEdit"
+        android:id="@+id/EdtId"
         android:layout_width="234dp"
         android:layout_height="48dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="148dp"
         android:layout_marginEnd="60dp"
         android:hint="아이디를 입력하세요"
-        app:layout_constraintBottom_toTopOf="@+id/pwEdit"
+        app:layout_constraintBottom_toTopOf="@+id/EdtPwd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/idView"
+        app:layout_constraintStart_toEndOf="@+id/tvId"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/pwEdit"
+        android:id="@+id/EdtPwd"
         android:layout_width="234dp"
         android:layout_height="48dp"
         android:layout_marginStart="27dp"
         android:layout_marginEnd="58dp"
         android:layout_marginBottom="48dp"
         android:hint="비밀번호를 입력하세요"
-        app:layout_constraintBottom_toTopOf="@+id/joinButton"
+        app:layout_constraintBottom_toTopOf="@+id/btnJoin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/pwView"
+        app:layout_constraintStart_toEndOf="@+id/tvPwd"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/idView"
+        android:id="@+id/tvId"
         android:layout_width="65dp"
         android:layout_height="39dp"
         android:layout_marginStart="42dp"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/pwView"
+        android:id="@+id/tvPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
@@ -57,10 +57,10 @@
         android:text="password"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvId" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
@@ -70,7 +70,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/joinButton"
+        android:id="@+id/btnJoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="104dp"

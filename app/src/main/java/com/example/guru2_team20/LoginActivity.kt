@@ -1,25 +1,34 @@
 package com.example.guru2_team20
 
-import androidx.appcompat.app.AppCompatActivity
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var idEdit: EditText
-    lateinit var pwEdit: EditText
-    lateinit var loginButton: Button
+    lateinit var EdtId : EditText
+    lateinit var EdtPwd : EditText
+    lateinit var btnLogin : Button
+    lateinit var btnJoin : Button
+
+    lateinit var myDBHelper: SQLiteOpenHelper
+    lateinit var sqlDB : SQLiteDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
         setTitle("로그인");
 
-        idEdit = findViewById(R.id.idEdit)
-        pwEdit = findViewById(R.id.pwEdit)
-        loginButton = findViewById(R.id.loginButton)
+        EdtId = findViewById(R.id.EdtId)
+        EdtPwd = findViewById(R.id.EdtPwd)
+        btnJoin = findViewById(R.id.btnJoin)
+        btnLogin = findViewById(R.id.btnLogin)
+
+
+
 
     }
 }

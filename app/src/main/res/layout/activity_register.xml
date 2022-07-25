@@ -6,45 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-    <EditText
-        android:id="@+id/edtId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="48dp"
-        android:ems="10"
-        android:hint="id"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/edtPasswordCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="48dp"
-        android:ems="10"
-        android:hint="비밀번호 확인"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="216dp"
-        android:text="닉네임"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/edtNickname"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:layout_width="0dp"
         android:layout_height="19dp"
@@ -55,59 +16,83 @@
         app:layout_constraintEnd_toStartOf="@+id/edtPasswordCheck"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.537" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-    <EditText
-        android:id="@+id/edtNickname"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="48dp"
-        android:ems="10"
-        android:hint="닉네임"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPasswordCheck"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="232dp"
+        android:text="닉네임"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edtNickname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="32dp"
         android:text="비밀번호"
         app:layout_constraintEnd_toStartOf="@+id/edtPassword"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="39dp"
+    <EditText
+        android:id="@+id/edtEnterId"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="32dp"
-        android:text="아이디"
-        app:layout_constraintEnd_toStartOf="@+id/edtId"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/edtPasswordCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
         android:ems="10"
-        android:hint="비밀번호"
         android:inputType="textPersonName"
+        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtId"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/edtNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordCheck"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -115,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="140dp"
         android:text="회원가입"
         android:textSize="30dp"
@@ -123,11 +108,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="39dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="32dp"
+        android:text="아이디"
+        app:layout_constraintEnd_toStartOf="@+id/edtId"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="64dp"
         android:text="가입 완료"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
