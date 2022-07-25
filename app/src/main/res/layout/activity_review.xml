@@ -71,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:numStars="5"
+            android:progressTint="@color/purple_200"
             android:rating="3" />
 
     </LinearLayout>
