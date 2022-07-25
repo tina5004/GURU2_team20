@@ -19,6 +19,8 @@ class review : AppCompatActivity() {
         ratingBar = findViewById(R.id.ratingBar)
 
 
+        setTitle("리뷰 작성")
+
 
     }
 }
