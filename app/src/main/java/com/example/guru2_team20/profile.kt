@@ -21,5 +21,7 @@ class profile : AppCompatActivity() {
         visitButton = findViewById(R.id.visitButton)
         reviewButton = findViewById(R.id.reviewButton)
         logInOutButton = findViewById(R.id.logInOutButton)
+
+        setTitle("나의 프로필")
     }
 }
