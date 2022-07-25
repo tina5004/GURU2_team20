@@ -7,7 +7,7 @@
     tools:context=".profile">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/registButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="제보한 가게"
@@ -17,25 +17,25 @@
         tools:layout_editor_absoluteY="330dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/visitButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="방문한 가게(찜)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/registButton" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/reviewButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="나의 리뷰"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/visitButton" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profileImageView"
         android:layout_width="189dp"
         android:layout_height="184dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
         tools:layout_editor_absoluteY="266dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/logInOutButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="로그인/로그아웃"
