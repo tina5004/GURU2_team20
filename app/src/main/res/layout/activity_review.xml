@@ -23,7 +23,8 @@
         <EditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="가게 명을 작성하세요" />
     </LinearLayout>
 
     <LinearLayout
@@ -85,7 +86,8 @@
         <EditText
             android:id="@+id/edtReview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="리뷰를 작성하세요." />
     </LinearLayout>
 
     <LinearLayout
