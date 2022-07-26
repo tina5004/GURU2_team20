@@ -9,33 +9,57 @@
     tools:context=".LoginActivity">
 
 
-    <EditText
-        android:id="@+id/EdtId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="아이디를 입력하세요" />
 
-    <EditText
-        android:id="@+id/EdtPwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="비밀번호를 입력하세요" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOGEDOG"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:layout_margin="20dp"/>
+
+        <EditText
+            android:id="@+id/EdtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="email" />
+
+        <EditText
+            android:id="@+id/EdtPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="password" />
 
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="로그인" />
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="로그인" />
 
-    <Button
-        android:id="@+id/btnJoin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="회원가입" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아직 회원이 아니신가요? " />
+
+            <Button
+                android:id="@+id/btnJoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:text="회원가입"
+                android:textColor="#FF8496D6" />
+
+        </LinearLayout>
 
 
 
 </LinearLayout>
-
-
