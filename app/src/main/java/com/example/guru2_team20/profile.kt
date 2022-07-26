@@ -8,7 +8,7 @@ import android.widget.ImageView
 class profile : AppCompatActivity() {
     lateinit var profileImageView: ImageView
     lateinit var registButton: Button
-    lateinit var visitButton: Button
+    //lateinit var visitButton: Button
     lateinit var reviewButton: Button
     lateinit var logInOutButton: Button
 
@@ -18,7 +18,7 @@ class profile : AppCompatActivity() {
 
         profileImageView = findViewById(R.id.profileImageView)
         registButton = findViewById(R.id.registButton)
-        visitButton = findViewById(R.id.visitButton)
+        //visitButton = findViewById(R.id.visitButton)
         reviewButton = findViewById(R.id.reviewButton)
         logInOutButton = findViewById(R.id.logInOutButton)
 
