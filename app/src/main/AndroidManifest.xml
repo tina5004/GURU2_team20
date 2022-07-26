@@ -31,10 +31,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDU3hOQd6CYlSqsc1JofFQWRDTHNpQw_7o" />
 
-        <activity
+        <!--activity
             android:name=".MapsActivity"
             android:exported="false"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps" /-->
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
@@ -44,7 +44,7 @@
             android:name=".profile"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".MapsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
