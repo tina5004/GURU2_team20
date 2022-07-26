@@ -9,32 +9,27 @@
 
     <Button
         android:id="@+id/registButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:text="제보한 가게"
-        app:layout_constraintBottom_toTopOf="@+id/visitButton"
+        app:layout_constraintBottom_toTopOf="@+id/reviewButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
-        android:id="@+id/visitButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registButton" />
 
     <Button
         android:id="@+id/reviewButton"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="나의 리뷰"
+        app:layout_constraintBottom_toTopOf="@+id/logInOutButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/visitButton" />
+        app:layout_constraintTop_toBottomOf="@+id/registButton" />
 
     <ImageView
         android:id="@+id/profileImageView"
