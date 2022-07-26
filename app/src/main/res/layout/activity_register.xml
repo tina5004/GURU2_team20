@@ -5,34 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:padding="50dp">
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="회원가입"
-        android:textSize="30dp"
+        android:text="Register"
+        android:textStyle="bold"
+        android:textSize="40dp"
         android:padding="50dp"
-        android:gravity="center"/>
+        android:gravity="center" />
 
     <EditText
         android:id="@+id/edtNewId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:hint="id" />
+        android:hint="email" />
 
     <EditText
         android:id="@+id/edtNewPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="password" />
+        android:hint="password"
+        android:inputType="textPassword" />
 
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="가입 완료" />
