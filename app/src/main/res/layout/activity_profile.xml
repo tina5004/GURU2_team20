@@ -23,7 +23,6 @@
         android:id="@+id/visitButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="방문한 가게(찜)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registButton" />
