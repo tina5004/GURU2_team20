@@ -10,6 +10,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.example.guru2_team20.databinding.ActivityMapsBinding
+import com.google.android.gms.maps.model.CameraPosition
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -32,9 +33,22 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val seoul = LatLng(37.6281, 127.0905)
+
+        //마커
+        val marker = MarkerOptions()
+            .position(seoul)
+            .title("Marker in Seoul Women's Univ")
+        mMap.addMarker(marker)
+
+        //카메라 위치
+        val cameraOption = CameraPosition.Builder()
+            .target(seoul)
+            .zoom(17f)
+            .build()
+
+        val camera = CameraUpdateFactory.newCameraPosition(cameraOption)
+
+        mMap.moveCamera(camera)
     }
 }
