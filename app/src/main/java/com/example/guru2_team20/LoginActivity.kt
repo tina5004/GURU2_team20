@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var btnLogin : Button
     lateinit var btnJoin : Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -43,10 +44,12 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
-   /* public override fun onStart() {
+
+    // 로그인 유지
+   public override fun onStart() {
         super.onStart()
         moveMainPage(auth?.currentUser)
-    }*/
+    }
 
     // 로그인
     private fun signIn(email: String, password: String) {
@@ -73,7 +76,7 @@ class LoginActivity : AppCompatActivity() {
     // 유저정보 넘겨주고 메인 액티비티 호출
     fun moveMainPage(user: FirebaseUser?){
         if( user!= null){
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,profile::class.java))
             finish()
         }
     }
