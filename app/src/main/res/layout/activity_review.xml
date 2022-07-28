@@ -88,13 +88,13 @@
         <TextView
             android:layout_width="60sp"
             android:layout_height="wrap_content"
-            android:text="내용" />
+            android:text="느낀점" />
 
         <EditText
             android:id="@+id/contentEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="리뷰를 작성하세요." />
+            android:hint="느낀점을 쓰세요." />
     </LinearLayout>
 
     <LinearLayout
