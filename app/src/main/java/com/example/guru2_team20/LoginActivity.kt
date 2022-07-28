@@ -15,11 +15,11 @@ import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
 
-    private var auth : FirebaseAuth? = null
-    lateinit var edtId : EditText
-    lateinit var edtPwd : EditText
-    lateinit var btnLogin : Button
-    lateinit var btnJoin : Button
+    private var auth: FirebaseAuth? = null
+    lateinit var edtId: EditText
+    lateinit var edtPwd: EditText
+    lateinit var btnLogin: Button
+    lateinit var btnJoin: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,21 +35,19 @@ class LoginActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         btnJoin.setOnClickListener {
-            startActivity(Intent(this,RegisterActivity::class.java))
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
 
         btnLogin.setOnClickListener {
-            signIn(edtId.text.toString(),edtPwd.text.toString())
+            signIn(edtId.text.toString(), edtPwd.text.toString())
         }
-
-
     }
 
     // 로그인 유지
-   /*public override fun onStart() {
+   public override fun onStart() {
         super.onStart()
         moveMainPage(auth?.currentUser)
-    }*/
+    }
 
     // 로그인
     private fun signIn(email: String, password: String) {
@@ -74,9 +72,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // 유저정보 넘겨주고 메인 액티비티 호출
-    fun moveMainPage(user: FirebaseUser?){
-        if( user!= null){
-            startActivity(Intent(this,profile::class.java))
+    fun moveMainPage(user: FirebaseUser?) {
+        if (user != null) {
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }
