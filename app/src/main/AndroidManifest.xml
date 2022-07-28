@@ -46,7 +46,9 @@
             android:name=".profile"
             android:exported="false" />
 
+        <!--
         <activity android:name=".MainActivity" />
+        -->
         <activity android:name=".review_info" />
         <activity android:name=".review_list" />
 
