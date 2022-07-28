@@ -42,11 +42,11 @@
             android:label="@string/title_activity_register"
             android:theme="@style/Theme.Guru2_team20" />
 
-
+        <!--
         <activity
             android:name=".profile"
             android:exported="false" />
-
+        -->
 
 
         <activity android:name=".MainActivity" />
@@ -57,7 +57,7 @@
 
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".profile"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -41,11 +41,11 @@ class profile : AppCompatActivity() {
         setTitle("마이 페이지")
 
         /*내 리뷰 버튼을 누르면 작성한 리뷰 목록이 보이도록 화면 전환*/
-        reviewButton.setOnClickListener {
+        /*reviewButton.setOnClickListener {
             val intent = Intent(this, review_info::class.java)
             startActivity(intent)
         }
-
+         */
 
         initImageViewProfile()
 
