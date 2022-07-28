@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.TextView
 
@@ -16,27 +18,28 @@ class review_list : AppCompatActivity() {
     lateinit var sqlitedb: SQLiteDatabase
     lateinit var layout: LinearLayout
 
+    lateinit var str_name: String
+
     @SuppressLint("Range")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review_list)
 
-        setTitle("내가 쓴 후기")
+        setTitle("작성한 리뷰 목록")
 
         dbManager = DBManager(this, "togedog", null, 1)
         sqlitedb = dbManager.readableDatabase
 
         layout = findViewById(R.id.reviewList)
+
         var cursor: Cursor
         cursor = sqlitedb.rawQuery("SELECT * FROM togedog;", null)
 
-
         var num: Int = 0
-        while(cursor.moveToNext()) {
-            var str_name = cursor.getString(cursor.getColumnIndex("name")).toString()
-            var str_possible = cursor.getString(cursor.getColumnIndex("possible")).toString()
-            var bar = cursor.getString(cursor.getColumnIndex("bar"))
-            var str_review = cursor.getString(cursor.getColumnIndex("review")).toString()
+        while (cursor.moveToNext()) {
+            var str_name = cursor.getString(cursor.getColumnIndex("storeName")).toString()
+            var str_orNot = cursor.getString(cursor.getColumnIndex("orNot")).toString()
+            var str_content = cursor.getString(cursor.getColumnIndex("content")).toString()
 
             var layout_item: LinearLayout = LinearLayout(this)
             layout_item.orientation = LinearLayout.VERTICAL
@@ -50,17 +53,14 @@ class review_list : AppCompatActivity() {
             tvName.setBackgroundColor(Color.LTGRAY)
             layout_item.addView(tvName)
 
-            var tvPossible: TextView = TextView(this)
-            tvPossible.text = str_possible
-            layout_item.addView(tvPossible)
+            var tvOrnot: TextView = TextView(this)
+            tvOrnot.text = str_orNot
+            layout_item.addView(tvOrnot)
 
-            var tvBar: TextView = TextView(this)
-            tvBar.text = bar.toString()
-            layout_item.addView(tvBar)
 
-            var tvReview: TextView = TextView(this)
-            tvReview.text = str_review
-            layout_item.addView(tvReview)
+            var tvContent: TextView = TextView(this)
+            tvContent.text = str_content
+            layout_item.addView(tvContent)
 
             layout_item.setOnClickListener {
                 val intent = Intent(this, review_info::class.java)
@@ -70,12 +70,42 @@ class review_list : AppCompatActivity() {
 
             layout.addView(layout_item)
             num++
-
         }
 
         cursor.close()
         sqlitedb.close()
         dbManager.close()
+    }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_review_list, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId) {
+            R.id.action_reg -> {
+                val intent = Intent(this, review::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_list -> {
+                val intent = Intent(this, review_list::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_remove -> {
+                dbManager = DBManager(this, "togedog", null, 1)
+                sqlitedb = dbManager.readableDatabase
+                sqlitedb.execSQL("DELETE FROM togedog WHERE storeName = '"+ str_name +"';")
+                sqlitedb.close()
+                dbManager.close()
+
+                val intent = Intent(this, review_list::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

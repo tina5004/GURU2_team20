@@ -1,10 +1,13 @@
 package com.example.guru2_team20
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.TextView
 
 class review_info : AppCompatActivity() {
@@ -12,22 +15,24 @@ class review_info : AppCompatActivity() {
     lateinit var dbManager: DBManager
     lateinit var sqlitedb: SQLiteDatabase
     lateinit var tvName: TextView
-    lateinit var tvReview: TextView
-    lateinit var tvPossible: TextView
+    lateinit var tvOrnot: TextView
+    lateinit var tvContent: TextView
 
     lateinit var str_name: String
-    lateinit var str_possible: String
+    lateinit var str_orNot: String
+    lateinit var str_content: String
     var bar: Int =0
-    lateinit var str_review: String
 
     @SuppressLint("Range")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review_info)
 
-        tvName = findViewById(R.id.edtName)
-        tvReview = findViewById(R.id.edtReview)
-        tvPossible = findViewById(R.id.possible)
+        setTitle("리뷰 상세정보")
+
+        tvName = findViewById(R.id.storeEdit)
+        tvOrnot = findViewById(R.id.orNot)
+        tvContent = findViewById(R.id.contentEdit)
 
         val intent = intent
         str_name = intent.getStringExtra("intent_name").toString()
@@ -36,11 +41,11 @@ class review_info : AppCompatActivity() {
         sqlitedb = dbManager.readableDatabase
 
         var cursor: Cursor
-        cursor = sqlitedb.rawQuery("SELECT * FROM togedog WHERE name = '"+str_name+"';", null)
+        cursor = sqlitedb.rawQuery("SELECT * FROM togedog WHERE storeName = '"+str_name+"';", null)
 
         if(cursor.moveToNext()) {
-            str_possible = cursor.getString(cursor.getColumnIndex("possible")).toString()
-            str_review = cursor.getInt(cursor.getColumnIndex("review")).toString()
+            str_orNot = cursor.getString(cursor.getColumnIndex("orNot")).toString()
+            str_content = cursor.getString(cursor.getColumnIndex("content")).toString()
         }
 
         cursor.close()
@@ -48,7 +53,39 @@ class review_info : AppCompatActivity() {
         dbManager.close()
 
         tvName.text = str_name
-        tvPossible.text = str_possible
-        tvReview.text = str_review + "\n"
+        tvOrnot.text = str_orNot
+        tvContent.text = str_content + "\n"
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_review_list, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId) {
+            R.id.action_reg -> {
+                val intent = Intent(this, review::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_list -> {
+                val intent = Intent(this, review_list::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_remove -> {
+                dbManager = DBManager(this, "togedog", null, 1)
+                sqlitedb = dbManager.readableDatabase
+                sqlitedb.execSQL("DELETE FROM togedog WHERE storeName = '"+ str_name +"';")
+                sqlitedb.close()
+                dbManager.close()
+
+                val intent = Intent(this, review_list::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

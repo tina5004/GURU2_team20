@@ -47,9 +47,13 @@
             android:exported="false" />
 
         <activity android:name=".MainActivity" />
+        <activity android:name=".review_info" />
+        <activity android:name=".review_list" />
+
+
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".review"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

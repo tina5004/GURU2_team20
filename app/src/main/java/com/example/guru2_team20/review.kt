@@ -4,23 +4,28 @@ import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.*
 
 class review : AppCompatActivity() {
 
     lateinit var dbManager: DBManager
     lateinit var sqlitedb: SQLiteDatabase
-    lateinit var btnRegist: Button
 
-    lateinit var edtName: EditText
-    lateinit var edtReview: EditText
+    lateinit var storeEdit: EditText
+    lateinit var contentEdit: EditText
 
-    lateinit var rg_possible: RadioGroup
-    lateinit var rb_possible_y: RadioButton
-    lateinit var rb_possible_n: RadioButton
+    //lateinit var ratingBar: RatingBar
 
-    lateinit var bar: TextView
-    lateinit var ratingBar: RatingBar
+    lateinit var orNot: RadioGroup
+    lateinit var possible: RadioButton
+    lateinit var impossible: RadioButton
+
+    lateinit var regButton: Button
+
+    lateinit var str_name: String
+    lateinit var str_orNot: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,36 +34,66 @@ class review : AppCompatActivity() {
 
         setTitle("리뷰 작성하기")
 
-        btnRegist = findViewById(R.id.btnRegister)
-        edtName = findViewById(R.id.edtName)
-        edtReview = findViewById(R.id.edtReview)
-        rg_possible = findViewById(R.id.possible)
-        rb_possible_y = findViewById(R.id.yes)
-        rb_possible_n = findViewById(R.id.no)
-        bar = findViewById(R.id.bar)
-        ratingBar = findViewById(R.id.ratingBar)
+        storeEdit = findViewById(R.id.storeEdit)
+        contentEdit = findViewById(R.id.contentEdit)
+        orNot = findViewById(R.id.orNot)
+        possible = findViewById(R.id.possible)
+        impossible = findViewById(R.id.impossible)
+        //ratingBar = findViewById(R.id.ratingBar)
+        regButton = findViewById(R.id.regButton)
 
         dbManager = DBManager(this, "togedog", null, 1)
 
-        btnRegist.setOnClickListener {
-            var str_name: String = edtName.text.toString()
-            var str_review: String = edtReview.text.toString()
-            var str_possible: String = ""
+        regButton.setOnClickListener {
+            var str_name: String = storeEdit.text.toString()
+            var str_content: String = contentEdit.text.toString()
+            var str_orNot: String = ""
 
-            if (rg_possible.checkedRadioButtonId == R.id.yes) {
-                str_possible = rb_possible_y.text.toString()
+            if(orNot.checkedRadioButtonId == R.id.possible) {
+                str_orNot = possible.text.toString()
             }
-            if (rg_possible.checkedRadioButtonId == R.id.no) {
-                str_possible = rb_possible_n.text.toString()
+            if(orNot.checkedRadioButtonId == R.id.impossible) {
+                str_orNot = impossible.text.toString()
             }
 
             sqlitedb = dbManager.writableDatabase
-            sqlitedb.execSQL("INSERT INTO togedog VALUES ('"+ str_name +"', '"+ str_possible +"', '"+ str_review +"');")
+            sqlitedb.execSQL("INSERT INTO togedog VALUES ('"+ str_name +"', '"+ str_orNot +"', '"+ str_content +"');")
             sqlitedb.close()
 
             val intent = Intent(this, review_info::class.java)
             intent.putExtra("intent_name", str_name)
             startActivity(intent)
         }
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_review_list, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId) {
+            R.id.action_reg -> {
+                val intent = Intent(this, review::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_list -> {
+                val intent = Intent(this, review_list::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_remove -> {
+                dbManager = DBManager(this, "togedog", null, 1)
+                sqlitedb = dbManager.readableDatabase
+                sqlitedb.execSQL("DELETE FROM togedog WHERE storeName = '"+ str_name +"';")
+                sqlitedb.close()
+                dbManager.close()
+
+                val intent = Intent(this, review_list::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }
