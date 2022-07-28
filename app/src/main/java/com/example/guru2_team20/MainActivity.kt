@@ -98,6 +98,8 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this@MainActivity, profile::class.java))
             }
 
+
+
             return@setOnItemSelectedListener false
         }
     }

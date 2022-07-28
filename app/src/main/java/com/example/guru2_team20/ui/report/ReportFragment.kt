@@ -117,9 +117,8 @@ class ReportFragment : Fragment() {
                 (binding.bigButton.isChecked || binding.smallButton.isChecked)
     }
 
-    /**
-      서버에 가게 정보를 등록하는 함수
-     */
+    //서버에 가게 정보를 등록하는 함수
+
     private fun register() {
         val name = binding.nameTextField.editText!!.text.toString().trim()
         val type = when (binding.typeGroup.checkedRadioButtonId) {

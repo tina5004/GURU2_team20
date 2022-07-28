@@ -107,9 +107,8 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
-    /**
-      UI 초기화
-     */
+    //UI 초기화
+
     private fun initUi() = with(binding) {
         toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
 
@@ -148,9 +147,8 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
-    /**
-      Google map ready callback
-     */
+    //Google map ready callback
+
     override fun onMapReady(map: GoogleMap) {
         _map = map
         map.uiSettings.isMyLocationButtonEnabled = false
