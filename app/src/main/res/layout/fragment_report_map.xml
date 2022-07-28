@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorSurface"
+    android:background="@color/purple_200"
+    android:backgroundTint="@color/purple_200"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -80,8 +81,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="가게 위치는 바로 여기!"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="이 위치로 가게 추가하기"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textStyle="bold" />
 
                 <com.google.android.material.card.MaterialCardView
@@ -126,7 +127,7 @@
                     android:insetTop="0dp"
                     android:insetBottom="0dp"
                     android:padding="16dp"
-                    android:text="이 위치로 주소 설정"
+                    android:text="가게 추가하러 가기"
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:textColor="@color/white"
                     app:backgroundTint="@color/purple_500"

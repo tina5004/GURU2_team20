@@ -56,8 +56,8 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-     * Map 의 카메라를 업데이트 한다.
-     * @param latLng 위경도
+      Map 의 카메라를 업데이트 한다.
+      @param latLng 위경도
      */
     private fun updateCamera(latLng: LatLng) {
         if (_map == null) return
@@ -74,8 +74,8 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-     * 주소를 업데이트 한다.
-     * @param latLng 위경도
+      주소를 업데이트 한다.
+      @param latLng 위경도
      */
     private suspend fun updateAddress(latLng: LatLng) {
         val address = viewModel.getAddress(latLng)
@@ -88,8 +88,8 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-     * 마커를 업데이트 한다.
-     * @param latLng 위경도
+      마커를 업데이트 한다.
+      @param latLng 위경도
      */
     private suspend fun updateMarkers(latLng: LatLng) {
         if (_map == null) return
@@ -108,7 +108,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-     * UI 초기화
+      UI 초기화
      */
     private fun initUi() = with(binding) {
         toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
@@ -149,7 +149,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-     * Google map ready callback
+      Google map ready callback
      */
     override fun onMapReady(map: GoogleMap) {
         _map = map

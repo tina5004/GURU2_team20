@@ -109,8 +109,8 @@ class ReportFragment : Fragment() {
     }
 
     /**
-     * 필수 입력 또는 체크를 확인하는 함수
-     * @return true 전부 입력됨
+      필수 입력 또는 체크를 확인하는 함수
+      @return true 전부 입력됨
      */
     private fun validateRequiredFields(): Boolean {
         return binding.nameTextField.editText!!.text.toString().isNotBlank() &&
@@ -118,7 +118,7 @@ class ReportFragment : Fragment() {
     }
 
     /**
-     * 서버에 가게 정보를 등록하는 함수
+      서버에 가게 정보를 등록하는 함수
      */
     private fun register() {
         val name = binding.nameTextField.editText!!.text.toString().trim()

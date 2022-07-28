@@ -39,9 +39,9 @@ class StoreRepository private constructor(appContext: Context) {
 
 
     /**
-     * 주소를 반환하는 함수
-     * @param latLng 위경도
-     * @return Address 객체 또는 null
+      주소를 반환하는 함수
+      @param latLng 위경도
+      @return Address 객체 또는 null
      */
     suspend fun getAddress(latLng: LatLng) = withContext(Dispatchers.IO) {
         try {
@@ -55,9 +55,9 @@ class StoreRepository private constructor(appContext: Context) {
     }
 
     /**
-     * 중앙 지점으로부터 반경 n 미터 이내의 가게 정보를 가져오는 함수
-     * @param center 중앙 지점
-     * @param radius 반경 n 미터
+      중앙 지점으로부터 반경 n 미터 이내의 가게 정보를 가져오는 함수
+      @param center 중앙 지점
+      @param radius 반경 n 미터
      */
     suspend fun getStores(center: LatLng, radius: Int) = withContext(Dispatchers.IO) {
         val center = GeoLocation(center.latitude, center.longitude)
@@ -99,7 +99,7 @@ class StoreRepository private constructor(appContext: Context) {
     }
 
     /**
-     * 가게를 DB 에 추가하는 함수
+    가게를 DB 에 추가하는 함수
      */
     fun addStore(latLng: LatLng, name: String, type: Store.Type, size: Store.Size) {
         val lat = latLng.latitude
