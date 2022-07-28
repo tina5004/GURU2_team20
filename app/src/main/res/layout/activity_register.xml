@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".RegisterActivity"
-    android:padding="50dp">
+    android:padding="40dp">
+
 
     <TextView
         android:id="@+id/textView9"
@@ -18,18 +19,21 @@
         android:padding="50dp"
         android:gravity="center" />
 
+
     <EditText
         android:id="@+id/edtNewId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="email" />
+        android:hint="email"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/edtNewPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
     <Button

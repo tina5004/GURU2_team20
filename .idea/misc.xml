@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/dhaeh/AndroidStudioProjects/guru2_team20_/app/src/main/res/layout/activity_main.xml" value="0.33177083333333335" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_main.xml" value="0.1157548125633232" />
+        <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_maps.xml" value="0.14764492753623187" />
+        <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_profile.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_review.xml" value="0.17255434782608695" />
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_profile.xml" value="0.22" />
