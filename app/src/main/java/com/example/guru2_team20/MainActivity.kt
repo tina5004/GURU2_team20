@@ -2,6 +2,7 @@ package com.example.guru2_team20
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Looper
@@ -91,6 +92,10 @@ class MainActivity : AppCompatActivity() {
                         .addToBackStack("Home")
                         .commit()
                 }
+            }
+
+            else if (itemId == R.id.tab3) {
+                startActivity(Intent(this@MainActivity, profile::class.java))
             }
 
             return@setOnItemSelectedListener false

@@ -38,13 +38,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val seoul = LatLng(37.566,126.9779)
 
         //마커 아이콘 만들기
-        val descriptor = getDescriptorFromDrawable(R.drawable.marker)
+        // val descriptor = getDescriptorFromDrawable(R.drawable.marker)
 
         //마커
         val marker = MarkerOptions()
             .position(seoul)
             .title("Marker is Seoul")
-            .icon(descriptor)
+            //.icon(descriptor)
 
         mMap.addMarker(marker)
 
