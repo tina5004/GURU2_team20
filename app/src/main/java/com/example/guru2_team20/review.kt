@@ -62,32 +62,17 @@ class review : AppCompatActivity() {
 
             val intent = Intent(this, review_info::class.java)
             intent.putExtra("intent_name", str_name)
+            Toast.makeText(applicationContext, "등록되었습니다.", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_review_list, menu)
+        menuInflater.inflate(R.menu.menu_review_reg, menu)
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item?.itemId) {
-            R.id.action_reg -> {
-                val intent = Intent(this, review::class.java)
-                startActivity(intent)
-                return true
-            }
             R.id.action_list -> {
-                val intent = Intent(this, review_list::class.java)
-                startActivity(intent)
-                return true
-            }
-            R.id.action_remove -> {
-                dbManager = DBManager(this, "togedog", null, 1)
-                sqlitedb = dbManager.readableDatabase
-                sqlitedb.execSQL("DELETE FROM togedog WHERE storeName = '"+ str_name +"';")
-                sqlitedb.close()
-                dbManager.close()
-
                 val intent = Intent(this, review_list::class.java)
                 startActivity(intent)
                 return true

@@ -78,7 +78,7 @@ class review_list : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_review_list, menu)
+        menuInflater.inflate(R.menu.menu_review_info, menu)
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
