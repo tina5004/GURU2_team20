@@ -98,9 +98,8 @@ class StoreRepository private constructor(appContext: Context) {
         return@withContext results
     }
 
-    /**
-    가게를 DB 에 추가하는 함수
-     */
+    //가게를 DB 에 추가하는 함수
+
     fun addStore(latLng: LatLng, name: String, type: Store.Type, size: Store.Size) {
         val lat = latLng.latitude
         val lng = latLng.longitude

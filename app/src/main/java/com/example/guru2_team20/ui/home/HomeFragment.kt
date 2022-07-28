@@ -128,9 +128,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         binding.emptyView.root.isVisible = stores.isEmpty()
     }
 
-    /**
-     * UI 초기화
-     */
+    //UI 초기화
+
     private fun initUi() = with(binding) {
         scanButton.setOnClickListener {
             if (_map == null) return@setOnClickListener
@@ -195,9 +194,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         }
     }
 
-    /**
-     * 가게를 선택하는 함수 (마커 선택, RecyclerView 의 위치 설정)
-     */
+    //가게를 선택하는 함수 (마커 선택, RecyclerView 의 위치 설정)
+
     private fun selectStore(index: Int) {
         if (selectedMarker != null && selectedMarker == markers?.getOrNull(index)) return
 
@@ -209,9 +207,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
         adapter.selectedIndex = index
     }
 
-    /**
-     * Google map ready callback
-     */
+    //Google map ready callback
+
     override fun onMapReady(map: GoogleMap) {
         _map = map
         map.uiSettings.isMyLocationButtonEnabled = false
