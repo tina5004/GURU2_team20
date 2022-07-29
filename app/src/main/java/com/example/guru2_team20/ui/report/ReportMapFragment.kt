@@ -56,7 +56,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-      Map 의 카메라를 업데이트 한다.
+      Map의 카메라를 업데이트 한다.
       @param latLng 위경도
      */
     private fun updateCamera(latLng: LatLng) {
@@ -159,7 +159,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
             @SuppressLint("MissingPermission")
             override fun onChanged(location: Location?) {
                 val latLng: LatLng = if (location == null) {
-                    LatLng(37.617603, 127.074835)
+                    LatLng(37.617603, 127.074835) //태릉입구로 기본 위치 설정
                 } else {
                     LatLng(location.latitude, location.longitude)
                 }

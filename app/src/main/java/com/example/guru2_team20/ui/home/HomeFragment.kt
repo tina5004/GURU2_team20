@@ -221,7 +221,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             @SuppressLint("MissingPermission")
             override fun onChanged(location: Location?) {
                 val latLng: LatLng = if (location == null) {
-                    LatLng(37.617603, 127.074835)
+                    LatLng(37.617603, 127.074835) //태릉입구로 기본 위치 설정
                 } else {
                     LatLng(location.latitude, location.longitude)
                 }
