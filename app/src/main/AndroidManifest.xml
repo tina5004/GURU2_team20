@@ -32,32 +32,25 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDU3hOQd6CYlSqsc1JofFQWRDTHNpQw_7o" />
 
-        <!--activity
-            android:name=".MapsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" /-->
+
         <activity
             android:name=".RegisterActivity"
             android:exported="false"
             android:label="@string/title_activity_register"
             android:theme="@style/Theme.Guru2_team20" />
 
-        <!--
         <activity
             android:name=".profile"
             android:exported="false" />
-        -->
-
 
         <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
 
         <activity android:name=".review_info" />
         <activity android:name=".review_list" />
 
-
-
         <activity
-            android:name=".profile"
+            android:name=".introActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
