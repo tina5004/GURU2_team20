@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--나의 프로필(MY PAGE) 화면-->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".profile">
 
-    <ImageView
+   <!--<ImageView
         android:id="@+id/profileImageView"
         android:layout_width="192dp"
         android:layout_height="189dp"
@@ -19,7 +20,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars" />-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:padding="30dp"
+        android:background="@android:color/white"
+        app:civ_border_overlay="true"
+        app:civ_border_width="5dp"
+        app:civ_border_color="@color/purple_200"
+        android:src="@drawable/profile"
+        />
 
     <TextView
         android:id="@+id/nameTextView"
@@ -30,10 +44,7 @@
         android:text="name"
         android:textStyle="bold"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/reviewButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/reviewButton"
@@ -43,10 +54,7 @@
         android:layout_marginBottom="16dp"
         android:drawableLeft="@drawable/profile_icon"
         android:text="나의 감상문 보기"
-        app:layout_constraintBottom_toTopOf="@+id/registButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/registButton"
@@ -55,10 +63,7 @@
         android:layout_marginBottom="16dp"
         android:drawableLeft="@drawable/profile_icon"
         android:text="감상문 등록하기"
-        app:layout_constraintBottom_toTopOf="@+id/logOutButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reviewButton" />
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/logOutButton"
@@ -68,10 +73,7 @@
         android:layout_marginBottom="40dp"
         android:drawableRight="@drawable/profile_icon_log"
         android:text="로그아웃"
-        app:cornerRadius="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registButton" />
+        android:layout_gravity="center"
+        app:cornerRadius="100dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
