@@ -12,7 +12,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.example.guru2_team20.ui.report.ReportMapFragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -39,14 +38,14 @@ class profile : AppCompatActivity() {
         logOutButton = findViewById(R.id.logOutButton)
         nameTextView = findViewById(R.id.nameTextView)
 
-        setTitle("MY PAGE")
+        setTitle("마이 페이지")
 
         /*내 리뷰 버튼을 누르면 작성한 리뷰 목록이 보이도록 화면 전환*/
-        reviewButton.setOnClickListener {
-            val intent = Intent(this, review::class.java)
+        /*reviewButton.setOnClickListener {
+            val intent = Intent(this, review_info::class.java)
             startActivity(intent)
         }
-
+         */
 
         initImageViewProfile()
 
@@ -62,6 +61,8 @@ class profile : AppCompatActivity() {
             auth?.signOut()
         }
     }
+
+
 
     private fun initImageViewProfile() {
         profileImageView = findViewById(R.id.profileImageView)
@@ -153,4 +154,5 @@ class profile : AppCompatActivity() {
             .create()
             .show()
     }
+
 }

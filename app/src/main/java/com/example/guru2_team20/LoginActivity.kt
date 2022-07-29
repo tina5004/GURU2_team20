@@ -44,10 +44,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     // 로그인 유지
-   public override fun onStart() {
-        super.onStart()
-        moveMainPage(auth?.currentUser)
-    }
+   //public override fun onStart() {
+        //super.onStart()
+        //moveMainPage(auth?.currentUser)
+   // }
 
     // 로그인
     private fun signIn(email: String, password: String) {
