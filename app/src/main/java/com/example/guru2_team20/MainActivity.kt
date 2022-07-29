@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Looper
+import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -17,8 +18,12 @@ import com.example.guru2_team20.ui.home.HomeFragment
 import com.example.guru2_team20.ui.report.ReportMapFragment
 import com.google.android.gms.location.*
 import com.google.android.gms.location.Priority.PRIORITY_HIGH_ACCURACY
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.snackbar.Snackbar.*
 
 class MainActivity : AppCompatActivity() {
+
 
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     private lateinit var viewModel: MainViewModel
@@ -57,6 +62,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
 
         viewModel = ViewModelProvider(this, MainViewModelFactory(applicationContext))
             .get(MainViewModel::class.java)
@@ -149,6 +155,7 @@ class MainActivity : AppCompatActivity() {
         super.onPause()
         stopLocationUpdates()
     }
+
 
 
     private class ViewPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {

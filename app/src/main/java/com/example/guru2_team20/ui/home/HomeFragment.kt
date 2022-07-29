@@ -48,6 +48,8 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -219,7 +221,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             @SuppressLint("MissingPermission")
             override fun onChanged(location: Location?) {
                 val latLng: LatLng = if (location == null) {
-                    LatLng(37.566, 126.9779)
+                    LatLng(37.617603, 127.074835)
                 } else {
                     LatLng(location.latitude, location.longitude)
                 }
