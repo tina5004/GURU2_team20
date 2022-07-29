@@ -38,13 +38,14 @@ class profile : AppCompatActivity() {
         logOutButton = findViewById(R.id.logOutButton)
         nameTextView = findViewById(R.id.nameTextView)
 
-        setTitle("마이 페이지")
+        setTitle("MY PAGE")
 
         /*내 리뷰 버튼을 누르면 작성한 리뷰 목록이 보이도록 화면 전환*/
         reviewButton.setOnClickListener {
             val intent = Intent(this, review::class.java)
             startActivity(intent)
         }
+
 
         initImageViewProfile()
 
