@@ -7,25 +7,31 @@
     android:orientation="vertical"
     tools:context=".profile">
 
+
     <Button
         android:id="@+id/registButton"
-        android:layout_width="wrap_content"
+        android:layout_width="162dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/purple_500"
         android:text="제보한 가게"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:iconTint="@color/purple_500"
         app:layout_constraintBottom_toTopOf="@+id/reviewButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
 
-
     <Button
         android:id="@+id/reviewButton"
-        android:layout_width="wrap_content"
+        android:layout_width="161dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/purple_500"
         android:text="나의 리뷰"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@+id/logOutButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/purple_200"
         android:text="로그아웃"
         app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"

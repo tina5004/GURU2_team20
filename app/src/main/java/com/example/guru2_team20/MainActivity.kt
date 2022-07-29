@@ -75,6 +75,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * UI 초기화 함수
+     * 하단 navigation 바
      */
     private fun initUi() = with(binding) {
         viewPager.apply {
