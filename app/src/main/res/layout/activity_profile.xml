@@ -9,6 +9,8 @@
     android:padding="10dp"
     tools:context=".profile">
 
+    <!--build.gradle 연동이 느려서 빨간 오류가 뜰 수 있음.
+    문제없이 실행되므로 그냥 디바이스 실행시키면 됨-->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImageView"
         android:layout_width="215dp"
