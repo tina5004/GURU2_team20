@@ -44,6 +44,7 @@
                 tools:text="#대형견 #소형견" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:insetTop="0dp"
@@ -60,6 +61,26 @@
                 app:iconPadding="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+
+                android:text="상세보기"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/purple_500"
+                app:cornerRadius="100dp"
+                app:iconPadding="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/materialButton2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
