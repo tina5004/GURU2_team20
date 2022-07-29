@@ -2,6 +2,7 @@ package com.example.guru2_team20.data.repository
 
 import android.content.Context
 import android.location.Geocoder
+import android.widget.Button
 import com.example.guru2_team20.data.model.Store
 import com.firebase.geofire.GeoFireUtils
 import com.firebase.geofire.GeoLocation
@@ -19,6 +20,8 @@ import kotlin.math.max
 
 
 class StoreRepository private constructor(appContext: Context) {
+
+
 
     companion object {
         private var instance: StoreRepository? = null
@@ -117,4 +120,5 @@ class StoreRepository private constructor(appContext: Context) {
 
         db.collection("stores").document().set(store)
     }
+
 }

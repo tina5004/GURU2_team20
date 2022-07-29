@@ -3,40 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/drawable/ic_baseline_favorite_18.xml" value="0.249" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/activity_maps.xml" value="0.36614583333333334" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/activity_register.xml" value="0.36614583333333334" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/fragment_home.xml" value="0.36614583333333334" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/fragment_report.xml" value="0.33" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/fragment_report_map.xml" value="0.36614583333333334" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/item_no_shops.xml" value="0.36614583333333334" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/item_no_stores.xml" value="0.36614583333333334" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/item_shop.xml" value="0.36614583333333334" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/layout/item_store.xml" value="0.67" />
-        <entry key="..\:/Development/android/eXpert/20220727/guru2_team20/app/src/main/res/menu/menu_bottom.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/dhaeh/AndroidStudioProjects/guru2_team20_/app/src/main/res/layout/activity_main.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/activity_login.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/activity_main.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/activity_maps.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/activity_profile.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/activity_register.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/activity_review.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/activity_review_info.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/activity_review_list.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/fragment_home.xml" value="0.24682971014492755" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/fragment_report.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/fragment_report_map.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/item_no_stores.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/layout/item_store.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/menu/menu_bottom.xml" value="0.33177083333333335" />
-        <entry key="..\:/Users/dhaeh/guru2_team20 (2) (1)/app/src/main/res/menu/menu_review_list.xml" value="0.33177083333333335" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_main.xml" value="0.1157548125633232" />
-        <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_profile.xml" value="0.17119565217391305" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_register.xml" value="0.264" />
-        <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/fragment_home.xml" value="0.21302083333333333" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_maps.xml" value="0.264" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_profile.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_register.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_review.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_review_info.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_review_list.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/fragment_report.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/fragment_report_map.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/item_no_stores.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/son_e/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/item_store.xml" value="0.4" />
+        <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/drawable/profile_icon.xml" value="0.1675" />
+        <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/drawable/profile_icon_log.xml" value="0.1675" />
+        <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_intro.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_profile.xml" value="0.22" />
@@ -45,6 +30,10 @@
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_review.xml" value="0.22" />
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_review_info.xml" value="0.22" />
         <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/layout/activity_review_list.xml" value="0.22" />
+        <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/menu/menu_go_home.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/menu/menu_review_info.xml" value="0.175" />
+        <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/menu/menu_review_list.xml" value="0.175" />
+        <entry key="..\:/Users/tina5/AndroidStudioProjects/guru2_team20/app/src/main/res/menu/menu_review_reg.xml" value="0.175" />
       </map>
     </option>
   </component>

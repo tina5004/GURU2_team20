@@ -159,7 +159,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
             @SuppressLint("MissingPermission")
             override fun onChanged(location: Location?) {
                 val latLng: LatLng = if (location == null) {
-                    LatLng(37.566, 126.9779)
+                    LatLng(37.617603, 127.074835)
                 } else {
                     LatLng(location.latitude, location.longitude)
                 }
