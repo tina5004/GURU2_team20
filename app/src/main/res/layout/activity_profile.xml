@@ -9,19 +9,6 @@
     android:padding="10dp"
     tools:context=".profile">
 
-   <!--<ImageView
-        android:id="@+id/profileImageView"
-        android:layout_width="192dp"
-        android:layout_height="189dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"
-        android:src="@drawable/profile"
-        app:layout_constraintBottom_toTopOf="@+id/nameTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />-->
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImageView"
         android:layout_width="215dp"
