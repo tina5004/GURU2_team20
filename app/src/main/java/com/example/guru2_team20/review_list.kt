@@ -1,5 +1,5 @@
 package com.example.guru2_team20
-
+/*작성한 감상문 목록을 출력하는 화면과 관련 코드*/
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.database.Cursor
@@ -11,6 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 
 class review_list : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class review_list : AppCompatActivity() {
     lateinit var sqlitedb: SQLiteDatabase
     lateinit var layout: LinearLayout
 
-    lateinit var str_name: String
+    //lateinit var str_name: String
 
     @SuppressLint("Range")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,14 +28,17 @@ class review_list : AppCompatActivity() {
 
         setTitle("LIST")
 
+        /*DB 내 데이터와 연동*/
         dbManager = DBManager(this, "togedog", null, 1)
         sqlitedb = dbManager.readableDatabase
 
         layout = findViewById(R.id.reviewList)
 
+        /*togedog 테이블에 있는 데이터 불러오기*/
         var cursor: Cursor
         cursor = sqlitedb.rawQuery("SELECT * FROM togedog;", null)
 
+        /*텍스트뷰로 등록했던 기록들 출력하기*/
         var num: Int = 0
         while (cursor.moveToNext()) {
             var str_name = cursor.getString(cursor.getColumnIndex("storeName")).toString()
@@ -81,35 +85,20 @@ class review_list : AppCompatActivity() {
         dbManager.close()
     }
 
+    /*감상문 목록보기 : 등록 메뉴*/
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_review_info, menu)
         return true
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item?.itemId) {
-            R.id.action_reg -> {
+            R.id.action_reg -> { //새로운 글 등록 시 사용
                 val intent = Intent(this, review::class.java)
-                startActivity(intent)
-                return true
-            }
-            R.id.action_list -> {
-                val intent = Intent(this, review_list::class.java)
-                startActivity(intent)
-                return true
-            }
-            R.id.action_remove -> {
-                dbManager = DBManager(this, "togedog", null, 1)
-                sqlitedb = dbManager.readableDatabase
-                sqlitedb.execSQL("DELETE FROM togedog WHERE storeName = '"+ str_name +"';")
-                sqlitedb.close()
-                dbManager.close()
-
-                val intent = Intent(this, review_list::class.java)
+                Toast.makeText(applicationContext, "글 추가하러 이동", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
                 return true
             }
         }
-
         return super.onOptionsItemSelected(item)
     }
 }

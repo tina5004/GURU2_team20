@@ -1,5 +1,5 @@
 package com.example.guru2_team20
-
+/*앱 실행 시 3초간 팀 로고가 그려진 화면 출력*/
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

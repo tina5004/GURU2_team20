@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 작성한 리뷰 목록을 스크롤해서 볼 수 있는 화면 -->
+<!-- 작성한 감상문 목록을 스크롤해서 볼 수 있는 화면 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--나의 프로필(MY PAGE) 화면-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,30 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".profile">
-
-    <Button
-        android:id="@+id/registButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="제보한 가게"
-        app:layout_constraintBottom_toTopOf="@+id/reviewButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
-
-
-    <Button
-        android:id="@+id/reviewButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="나의 리뷰"
-        app:layout_constraintBottom_toTopOf="@+id/logOutButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registButton" />
 
     <ImageView
         android:id="@+id/profileImageView"
@@ -53,10 +30,35 @@
         android:text="name"
         android:textStyle="bold"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/registButton"
+        app:layout_constraintBottom_toTopOf="@+id/reviewButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
+
+    <Button
+        android:id="@+id/reviewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:drawableLeft="@drawable/profile_icon"
+        android:text="나의 감상문 보기"
+        app:layout_constraintBottom_toTopOf="@+id/registButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <Button
+        android:id="@+id/registButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:drawableLeft="@drawable/profile_icon"
+        android:text="감상문 등록하기"
+        app:layout_constraintBottom_toTopOf="@+id/logOutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviewButton" />
 
     <Button
         android:id="@+id/logOutButton"
@@ -64,10 +66,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="40dp"
+        android:drawableRight="@drawable/profile_icon_log"
         android:text="로그아웃"
         app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reviewButton" />
+        app:layout_constraintTop_toBottomOf="@+id/registButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

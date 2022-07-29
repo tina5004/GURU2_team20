@@ -1,11 +1,13 @@
 package com.example.guru2_team20
-
+/*프로필(MY PAGE)에 해당하는 코드들*/
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -20,7 +22,6 @@ import com.google.firebase.ktx.Firebase
 class profile : AppCompatActivity() {
     lateinit var profileImageView: ImageView
     lateinit var registButton: Button
-    //lateinit var visitButton: Button
     lateinit var reviewButton: Button
     lateinit var logOutButton: Button
     lateinit var nameTextView : TextView
@@ -40,15 +41,22 @@ class profile : AppCompatActivity() {
 
         setTitle("MY PAGE")
 
-        /*내 리뷰 버튼을 누르면 작성한 리뷰 목록이 보이도록 화면 전환*/
+        /*내 감상문 보기 버튼을 누르면 작성한 작성한 감상문 목록이 보이도록 전환*/
         reviewButton.setOnClickListener {
+            val intent = Intent(this, review_list::class.java)
+            startActivity(intent)
+        }
+
+        /*감상문 등록하기 버튼을 누르면 작성한 감상문 작성 화면이 보이도록 전환*/
+        registButton.setOnClickListener {
             val intent = Intent(this, review::class.java)
             startActivity(intent)
         }
 
-
+        /*프로필 사진 함수 호출*/
         initImageViewProfile()
 
+        /*사용자 이름(닉네임) - 로그인 사용자 이메일과 연동 */
         if (user != null) {
             nameTextView.setText(user.email)
         }
@@ -62,8 +70,7 @@ class profile : AppCompatActivity() {
         }
     }
 
-
-
+    /*프로필 사진 관련 함수(접근권한)*/
     private fun initImageViewProfile() {
         profileImageView = findViewById(R.id.profileImageView)
 
@@ -155,4 +162,20 @@ class profile : AppCompatActivity() {
             .show()
     }
 
+    /*홈 아이콘 클릭 시 : 프로필 -> 홈으로 이동*/
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_go_home, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId) {
+            R.id.action_home -> { //메인 홈으로 이동
+                val intent = Intent(this, MainActivity::class.java)
+                Toast.makeText(applicationContext, "홈으로 이동", Toast.LENGTH_SHORT).show()
+                startActivity(intent)
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--마이프로필(MY PAGE) - 감상문 아이콘 레이어-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/profile_icon_co"
+        android:width="20dp"
+        android:height="20dp"
+        android:right="10dp">
+
+    </item>
+</layer-list>

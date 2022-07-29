@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="100dp"
+    android:paddingTop="50dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     tools:context=".review">
@@ -17,9 +17,11 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:layout_width="60sp"
+            android:layout_width="93dp"
             android:layout_height="wrap_content"
-            android:text="가게 이름" />
+            android:text="가게 이름"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/storeEdit"
@@ -34,9 +36,11 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="60sp"
+            android:layout_width="93dp"
             android:layout_height="wrap_content"
-            android:text="동반여부" />
+            android:text="동반여부"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp" />
 
         <RadioGroup
             android:id="@+id/orNot"
@@ -65,9 +69,11 @@
 
         <TextView
             android:id="@+id/barView"
-            android:layout_width="60sp"
+            android:layout_width="91dp"
             android:layout_height="wrap_content"
-            android:text="평점" />
+            android:text="평점"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp" />
 
         <RatingBar
             android:id="@+id/ratingBar"
@@ -87,22 +93,27 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="60sp"
+            android:layout_width="93dp"
             android:layout_height="wrap_content"
-            android:text="느낀점" />
+            android:text="내용"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/contentEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="느낀점을 쓰세요." />
+            android:hint="방문 후 감상을 써보세요" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="50dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
 
         <Button
             android:id="@+id/regButton"

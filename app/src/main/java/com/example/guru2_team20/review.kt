@@ -25,9 +25,9 @@ class review : AppCompatActivity() {
 
     lateinit var regButton: Button
 
-    lateinit var str_name: String
-    lateinit var str_orNot: String
-    lateinit var str_rationgBar: String
+    //lateinit var str_name: String
+    //lateinit var str_orNot: String
+    //lateinit var str_rationgBar: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +62,7 @@ class review : AppCompatActivity() {
 
             val intent = Intent(this, review_info::class.java)
             intent.putExtra("intent_name", str_name)
-            Toast.makeText(applicationContext, "등록되었습니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "등록 완료", Toast.LENGTH_SHORT).show()
             startActivity(intent)
         }
 
@@ -73,13 +73,13 @@ class review : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item?.itemId) {
-            R.id.action_list -> {
+            R.id.action_list -> { //등록한 글 목록으로 이동 시 사용
                 val intent = Intent(this, review_list::class.java)
+                Toast.makeText(applicationContext, "목록으로 이동", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
                 return true
             }
         }
-
         return super.onOptionsItemSelected(item)
     }
 }

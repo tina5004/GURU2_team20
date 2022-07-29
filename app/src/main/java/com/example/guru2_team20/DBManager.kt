@@ -1,5 +1,5 @@
 package com.example.guru2_team20
-
+/*감상문 저장 데이터베이스(sqlite)*/
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper

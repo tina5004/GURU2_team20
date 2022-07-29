@@ -7,6 +7,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="action_home">홈으로 가기</string>
     <string name="action_list">나의 모음</string>
     <string name="action_reg">추가하기</string>
     <string name="action_remove">삭제하기</string>
