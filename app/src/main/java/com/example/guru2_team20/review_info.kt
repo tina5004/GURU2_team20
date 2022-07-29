@@ -18,9 +18,13 @@ class review_info : AppCompatActivity() {
     lateinit var tvOrnot: TextView
     lateinit var tvContent: TextView
 
+    /*별점값을 textview로 보이기*/
+    lateinit var tvRatingBar: TextView
+
     lateinit var str_name: String
     lateinit var str_orNot: String
     lateinit var str_content: String
+    lateinit var str_ratingBar: String
     var bar: Int =0
 
     @SuppressLint("Range")
@@ -28,11 +32,12 @@ class review_info : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review_info)
 
-        setTitle("리뷰 상세정보")
+        setTitle("DETAIL_INFO")
 
         tvName = findViewById(R.id.storeEdit)
         tvOrnot = findViewById(R.id.orNot)
         tvContent = findViewById(R.id.contentEdit)
+        tvRatingBar = findViewById(R.id.ratingBar)
 
         val intent = intent
         str_name = intent.getStringExtra("intent_name").toString()
@@ -46,6 +51,8 @@ class review_info : AppCompatActivity() {
         if(cursor.moveToNext()) {
             str_orNot = cursor.getString(cursor.getColumnIndex("orNot")).toString()
             str_content = cursor.getString(cursor.getColumnIndex("content")).toString()
+            str_ratingBar = cursor.getString(cursor.getColumnIndex("ratingBar")).toString()
+
         }
 
         cursor.close()
@@ -54,6 +61,7 @@ class review_info : AppCompatActivity() {
 
         tvName.text = str_name
         tvOrnot.text = str_orNot
+        tvRatingBar.text = str_ratingBar
         tvContent.text = str_content + "\n"
     }
 

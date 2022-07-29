@@ -25,7 +25,7 @@ class review_list : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review_list)
 
-        setTitle("작성한 리뷰 목록")
+        setTitle("LIST")
 
         dbManager = DBManager(this, "togedog", null, 1)
         sqlitedb = dbManager.readableDatabase
@@ -39,6 +39,7 @@ class review_list : AppCompatActivity() {
         while (cursor.moveToNext()) {
             var str_name = cursor.getString(cursor.getColumnIndex("storeName")).toString()
             var str_orNot = cursor.getString(cursor.getColumnIndex("orNot")).toString()
+            var str_ratingBar = cursor.getString(cursor.getColumnIndex("ratingBar")).toString()
             var str_content = cursor.getString(cursor.getColumnIndex("content")).toString()
 
             var layout_item: LinearLayout = LinearLayout(this)
@@ -57,6 +58,9 @@ class review_list : AppCompatActivity() {
             tvOrnot.text = str_orNot
             layout_item.addView(tvOrnot)
 
+            var tvRatingBar: TextView = TextView(this)
+            tvRatingBar.text = str_ratingBar
+            layout_item.addView(tvRatingBar)
 
             var tvContent: TextView = TextView(this)
             tvContent.text = str_content
