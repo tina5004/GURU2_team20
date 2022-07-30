@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
 
         initUi()
 
+        //위치 정보 접근
         if (!checkLocationPermissions()) {
             permissionRequest.launch(
                 arrayOf(
@@ -79,16 +80,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * UI 초기화 함수
-     * 하단 navigation 바
-     */
+    // UI 초기화 함수
     private fun initUi() = with(binding) {
         viewPager.apply {
             adapter = ViewPagerAdapter(this@MainActivity)
             isUserInputEnabled = false
         }
 
+        //하단 navigation 바
         bottomNavigation.setOnItemSelectedListener {
             val itemId = it.itemId
 
@@ -125,9 +124,8 @@ class MainActivity : AppCompatActivity() {
         ) == PackageManager.PERMISSION_GRANTED
     }
 
-    /**
-     * 현재 위치 업데이트를 시작하는 함수
-     */
+    // 현재 위치 업데이트를 시작하는 함수
+
     @SuppressLint("MissingPermission")
     private fun startLocationUpdates() {
         if (checkLocationPermissions() && !requestingLocationUpdates) {
@@ -136,9 +134,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * 현재 위치 업데이트를 종료하는 함수
-     */
+    //현재 위치 업데이트를 종료하는 함수
+
     private fun stopLocationUpdates() {
         if (requestingLocationUpdates) {
             fusedLocationClient.removeLocationUpdates(locationCallback)

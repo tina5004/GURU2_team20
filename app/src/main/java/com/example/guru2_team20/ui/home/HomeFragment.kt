@@ -66,7 +66,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-     * Map 의 카메라를 업데이트 한다.
+     * Map 의 카메라 업데이트
      * @param latLng 위경도
      */
     private fun updateCamera(latLng: LatLng) {
@@ -84,7 +84,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-     * 주소를 업데이트 한다.
+     * 주소 업데이트
      * @param latLng 위경도
      */
     private suspend fun updateAddress(latLng: LatLng) {
@@ -98,7 +98,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-     * 가게 정보를 업데이트 한다.
+     * 가게 정보 업데이트
      * @param latLng 위경도
      */
     private suspend fun updateStores(latLng: LatLng) {

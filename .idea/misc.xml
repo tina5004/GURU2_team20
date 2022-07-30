@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dhaeh/AndroidStudioProjects/guru2_team20_5/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/Users/dhaeh/AndroidStudioProjects/guru2_team20_5/app/src/main/res/layout/fragment_home.xml" value="0.33177083333333335" />
+        <entry key="..\:/Users/dhaeh/AndroidStudioProjects/guru2_team20_5/app/src/main/res/layout/fragment_report.xml" value="0.33177083333333335" />
+        <entry key="..\:/Users/dhaeh/AndroidStudioProjects/guru2_team20_5/app/src/main/res/layout/fragment_report_map.xml" value="0.33177083333333335" />
+        <entry key="..\:/Users/dhaeh/AndroidStudioProjects/guru2_team20_5/app/src/main/res/layout/item_store.xml" value="0.2972222222222222" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_main.xml" value="0.1157548125633232" />
         <entry key="..\:/Users/ryeou/guru2_team20/app/src/main/res/layout/activity_register.xml" value="0.264" />

@@ -50,6 +50,7 @@ class ReportFragment : Fragment() {
     private lateinit var viewModel: MainViewModel
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -76,6 +77,8 @@ class ReportFragment : Fragment() {
         return binding.root
     }
 
+
+    //가게 상세 정보 선택
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
