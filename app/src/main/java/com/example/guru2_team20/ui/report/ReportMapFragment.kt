@@ -56,7 +56,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-      Map의 카메라를 업데이트 한다.
+      Map의 카메라 업데이트
       @param latLng 위경도
      */
     private fun updateCamera(latLng: LatLng) {
@@ -74,7 +74,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-      주소를 업데이트 한다.
+      주소 업데이트
       @param latLng 위경도
      */
     private suspend fun updateAddress(latLng: LatLng) {
@@ -88,7 +88,7 @@ class ReportMapFragment : Fragment(), OnMapReadyCallback {
     }
 
     /**
-      마커를 업데이트 한다.
+      마커 업데이트
       @param latLng 위경도
      */
     private suspend fun updateMarkers(latLng: LatLng) {
